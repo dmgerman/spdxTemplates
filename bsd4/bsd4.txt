@@ -1,5 +1,4 @@
-Copyright (c) {{match=(.+);name=copyright;type=required;example=1983,1991 The Regents of the University of California.}}
-All rights reserved.
+{{match=Copyright \(c\).+ All rights reserved.;name=copyrigh;type=optional;example=Copyright (c) 1983,1991 The Regents of the University of California. All rights reserved}}
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are met:
