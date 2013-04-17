@@ -1,0 +1,35 @@
+* A proposal for templatization of SPDX licenses.
+
+** Introduction
+
+Certain sections of a license vary as they are used. Some of this
+variability is by design (think of the BSD family of licenses). In
+other cases it is due to small changes in licenses as they are copied
+and propagated.
+
+** Rules
+
+A variable section of a license is specified with a rule. A rule is
+wrapped between {{}} and is composed of 4 parts. Each is separated with ;. They cannot be embedded within other rules.
+
+- match: a POSIX regular expression (semicolons are escaped with \; within it)
+- name: name of the field in the template. Each rule 
+- type: required or optional
+- example: sample text of the rule
+
+** Example:
+
+#+BEGIN_EXAMPLE
+{{match=.+;name=copyrightHolderLiability;type=required;example=THE AUTHOR OR CONTRIBUTORS}}
+#+END_EXAMPLE
+
+This matches the regular expression _.+_ /"any character at least
+once"/. It is /required/, its name is /copyrightHolderLiability/ and an example of the use of the rule is the text /THE AUTHOR OR CONTRIBUTORS/.
+
+
+
+** Contact
+
+Comments, patches, suggestions to Daniel German, dmg@uvic.ca
+
+
