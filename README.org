@@ -21,7 +21,7 @@ wrapped between {{}} and is composed of 5 parts. Each is separated with ;. They 
 ** Example:
 
 #+BEGIN_EXAMPLE
-{{original=THE AUTHOR OR CONTRIBUTORS};match=.+;name=copyrightHolderLiability;type=required;example=dmg inc.}}
+{{original=THE AUTHOR OR CONTRIBUTORS;match=.+;name=copyrightHolderLiability;type=required;example=dmg inc.}}
 #+END_EXAMPLE
 
 This matches the regular expression _.+_ /"any character at least
