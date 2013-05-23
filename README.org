@@ -12,11 +12,11 @@ and propagated.
 A variable section of a license is specified with a rule. A rule is
 wrapped between {{}} and is composed of 5 parts. Each is separated with ;. They cannot be embedded within other rules.
 
-- original: the original text of the rule. It should be the first field.
-- match: a POSIX regular expression (semicolons are escaped with \; within it)
-- name: name of the field in the template. Each rule 
-- type: required or optional
-- example: another example of the use of the text (optional)
+- original: the original text of the rule. It should be the first field. It is required.
+- match: a POSIX regular expression (semicolons are escaped with \; within it). This field is required.
+- name: name of the field in the template. Each rule must have a name. This field is required.
+- type: required or optional. This field is required.
+- example: another example of the use of the text. This field is optional.
 
 ** Example:
 
