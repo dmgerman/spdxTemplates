@@ -10,17 +10,18 @@ and propagated.
 ** Rules
 
 A variable section of a license is specified with a rule. A rule is
-wrapped between {{}} and is composed of 4 parts. Each is separated with ;. They cannot be embedded within other rules.
+wrapped between {{}} and is composed of 5 parts. Each is separated with ;. They cannot be embedded within other rules.
 
+- original: the original text of the rule. It should be the first field.
 - match: a POSIX regular expression (semicolons are escaped with \; within it)
 - name: name of the field in the template. Each rule 
 - type: required or optional
-- example: sample text of the rule
+- example: another example of the use of the text (optional)
 
 ** Example:
 
 #+BEGIN_EXAMPLE
-{{match=.+;name=copyrightHolderLiability;type=required;example=THE AUTHOR OR CONTRIBUTORS}}
+{{original=THE AUTHOR OR CONTRIBUTORS};match=.+;name=copyrightHolderLiability;type=required;example=dmg inc.}}
 #+END_EXAMPLE
 
 This matches the regular expression _.+_ /"any character at least
