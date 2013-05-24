@@ -9,11 +9,11 @@ are met:
 2. Redistributions in binary form must reproduce the above copyright
    notice, this list of conditions and the following disclaimer in the
    documentation and/or other materials provided with the distribution.
-3. Neither the {{match=(name|names);name=nameprefix;example=name}} of {{original=the author nor the names of other contributors;match=.+;name=organizationClause4;example=ACME Inc.}}
+3. Neither the {{original=name;match=(name|names);name=nameprefix;example=name}} of {{original=the author nor the names of other contributors;match=.+;name=organizationClause4;example=ACME Inc.}}
    may be used to endorse or promote products derived from this software
    without specific prior written permission.
 
-THIS SOFTWARE IS PROVIDED BY {{original=THE AUTHOR AND CONTRIBUTORS;match=.+;name=copyrightHolderAsIs;type=required}} <QUOTES>AS IS<QUOTES> AND 
+THIS SOFTWARE IS PROVIDED BY {{original=THE AUTHOR AND CONTRIBUTORS;match=.+;name=copyrightHolderAsIs;type=required}} "AS IS" AND 
 ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
 WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
 DISCLAIMED. IN NO EVENT SHALL {{original=THE AUTHOR OR CONTRIBUTORS;match=.+;name=copyrightHolderLiability;type=required;example=John Wayne}} BE LIABLE FOR ANY
