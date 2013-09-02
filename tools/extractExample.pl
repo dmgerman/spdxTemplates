@@ -1,8 +1,9 @@
 #!/usr/bin/perl
 
+use strict;
+
 while (<>) {
     chomp;
-    s/<QUOTES>/"/g;
     if (not /\{\{/) {
 	print "$_\n";
 	next;
@@ -10,10 +11,16 @@ while (<>) {
     while (/^(.*){{(.*?)}}(.*)$/) {
 	$_ = $3;
 	print "$1";
-	print Extract_Example($2);
+	print Subs(Extract_Example($2));
     }
-    print $_;
-    print "\n";
+    print "$_\n";
+}
+
+sub Subs
+{
+    my ($text)  = @_;
+    $text =~ s/\\n/\n/g;
+    return $text;
 }
 
 sub Extract_Example
@@ -21,6 +28,7 @@ sub Extract_Example
     my ($fields) = @_;
     
     if ($fields =~ /example=(.+)$/) {
+#	print "[$1]\n";
 	return $1;
     } else {
 	return "NONE";
