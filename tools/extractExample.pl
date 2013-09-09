@@ -4,11 +4,13 @@ use strict;
 
 while (<>) {
     chomp;
-    if (not /\{\{/) {
+    s/<<beginOptional;name=copyrightSection>>//g;
+    s/<<endOptional>//g;
+    if (not /<</) {
 	print "$_\n";
 	next;
     } 
-    while (/^(.*){{(.*?)}}(.*)$/) {
+    while (/^(.*)<<(.*?)>>(.*)$/) {
 	$_ = $3;
 	print "$1";
 	print Subs(Extract_Example($2));
