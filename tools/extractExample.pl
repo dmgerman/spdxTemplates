@@ -4,13 +4,13 @@ use strict;
 
 while (<>) {
     chomp;
-    s/<<beginOptional;name=copyrightSection>>//g;
-    s/<<endOptional>//g;
+    s/<<beginOptional;name=[^>]+>>//g;
+    s/<<endOptional>>//g;
     if (not /<</) {
 	print "$_\n";
 	next;
     } 
-    while (/^(.*)<<(.*?)>>(.*)$/) {
+    while (/^(.*?)<<(.*?)>>(.*)$/) { # non-greedy search
 	$_ = $3;
 	print "$1";
 	print Subs(Extract_Example($2));
@@ -33,6 +33,6 @@ sub Extract_Example
 #	print "[$1]\n";
 	return $1;
     } else {
-	return "NONE";
+	return "\n[[[Warning Example missing!!!]]]]\n";
     }
 }
